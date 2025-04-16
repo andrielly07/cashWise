@@ -80,8 +80,8 @@ body {
 
 .menu-suspenso {
   position: absolute;
-  top: 50px; /* Ajuste a distância para descer mais */
-  right: 0;
+  top: 54px;
+  right: 0px;
   background-color: white;
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
