@@ -6,42 +6,125 @@ body {
 
 .topo-cashwise {
   display: flex;
+  align-items: stretch;
   justify-content: space-between;
-  align-items: center;
-  background-color: #10a5c6;
-  padding: 0 30px;
   height: 70px;
+  width: 100vw;
+  background-color: #10A5C6;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 999;
+  z-index: 100;
+}
+
+.menu-navegacao {
+  display: flex;
+  height: 100%;
+}
+
+.link-menu {
+  color: white;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.link-menu + .link-menu {
+  border-left: 1px solid #e0e0e0;
+}
+
+.link-menu:hover {
+  background-color: white;
+  color: #10A5C6;
+}
+
+.lado-esquerdo {
+  display: flex;
+  align-items: center;
 }
 
 .logo-cash {
-  max-height: 250px;
-  max-width: 300px;
+  height: 250px;
+  width: 300px;
   object-fit: contain;
 }
 
 .icones-direita {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
+  font-size: 1.5rem;
+  color: white;
+  white-space: nowrap;
+  font-family: 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+  padding-right: 30px;
 }
 
-.menu-navegacao a {
+.icone-svg {
+  width: 24px;
+  height: 24px;
   color: white;
-  text-decoration: none;
-  margin: 0 12px;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
-  transition: color 0.3s;
 }
-.menu-navegacao {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+
+.header-centro {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ========================== */
+.menu-pontinhos {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-suspenso {
+  position: fixed;
+  top: 71px;
+  right: 1px;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+  z-index: 200;
+  border-radius: 8px;
+  padding: 10px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  display: none;
+}
+
+.menu-suspenso.mostrar {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-suspenso a {
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Lexend';
+  font-weight: 400;
+}
+
+.menu-suspenso a:hover {
+  background-color: #10A5C6;
+  color: white;
 }
 
 .divisoria-menu {
@@ -49,47 +132,6 @@ body {
   height: 70px;
   background-color: white;
   display: inline-block;
-}
-
-.menu-navegacao a:hover {
-  color: #00f0e0;
-}
-
-.icone-svg {
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-}
-
-.menu-pontinhos {
-  position: relative;
-}
-
-.menu-suspenso {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: white;
-  border-radius: 6px;
-  padding: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  z-index: 1000;
-}
-
-.menu-pontinhos:hover .menu-suspenso {
-  display: block;
-}
-
-.menu-suspenso a {
-  display: block;
-  padding: 6px 10px;
-  color: #007a6f;
-  text-decoration: none;
-  font-family: 'Lexend', sans-serif;
-}
-
-.menu-suspenso a:hover {
-  background-color: #f0f0f0;
 }
 
 /* Visão Geral */
