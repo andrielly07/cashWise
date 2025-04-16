@@ -3,7 +3,6 @@ body {
   padding-top: 70px; /* mesmo valor da altura do topo */
 }
 
-
 .topo-cashwise {
   display: flex;
   align-items: stretch;
@@ -67,28 +66,22 @@ body {
   padding-right: 30px;
 }
 
-.icone-svg {
-  width: 24px;
-  height: 24px;
-  color: white;
-}
-
-.header-centro {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* ========================== */
+/* Menu de três pontos */
 .menu-pontinhos {
   position: relative;
   display: inline-block;
 }
 
+.icone-svg {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
 .menu-suspenso {
-  position: fixed;
-  top: 71px;
-  right: 1px;
+  position: absolute;
+  top: 50px; /* Ajuste a distância para descer mais */
+  right: 0;
   background-color: white;
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
@@ -96,21 +89,13 @@ body {
   border-radius: 8px;
   padding: 10px 0;
   opacity: 0;
-  transition: opacity 0.3s ease;
   pointer-events: none;
-  display: none;
+  transition: opacity 0.3s ease;
 }
 
-.menu-suspenso.mostrar {
-  display: block;
+.menu-pontinhos:hover .menu-suspenso {
   opacity: 1;
   pointer-events: auto;
-  animation: fadeIn 0.3s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 .menu-suspenso a {
@@ -133,6 +118,9 @@ body {
   background-color: white;
   display: inline-block;
 }
+
+/* Outras regras já fornecidas permanecem inalteradas */
+
 
 /* Visão Geral */
 #visao-geral {
@@ -192,7 +180,7 @@ body {
   .card {
     width: 100%;
     max-width: 300px;
-    height: 480px;
+    height: 500px;
     margin: 0 auto;
     border-radius: 12px;
     transition: transform 0.3s ease;
@@ -205,9 +193,8 @@ body {
  
   .card-img-top {
     width: 100%;
-    height: 190px;
+    height: 220px;
     object-fit: cover;
-    padding: 10px;
     border-radius: 8px;
   }
  
