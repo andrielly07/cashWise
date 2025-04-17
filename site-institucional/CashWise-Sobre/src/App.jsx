@@ -1,4 +1,3 @@
-// App.jsx
 import './index.css';
 import { useState, useEffect, useRef } from 'react';
 import { FaInstagram, FaLinkedin, FaXTwitter, FaYoutube, FaCircle, FaRegCircle } from "react-icons/fa6";
@@ -7,14 +6,17 @@ const carouselItems = [
   {
     title: "Missão",
     text: "Nossa missão é proporcionar educação financeira acessível e envolvente para jovens e pré-adolescentes, incentivando hábitos saudáveis de consumo e poupança desde cedo.",
+    imagem: "Missao.jpg"
   },
   {
     title: "Visão",
     text: "Ser a principal plataforma de gestão financeira para jovens na América Latina, reconhecida por sua abordagem educativa, criativa e inclusiva.",
+    imagem: "Visao.jpg"
   },
   {
     title: "Valores",
     text: "Acreditamos na educação, na transparência e no poder da tecnologia como ferramentas de transformação financeira e social. Respeito, inclusão e inovação guiam tudo o que fazemos.",
+    imagem: "Valores.jpg"
   },
 ];
 
@@ -25,7 +27,6 @@ function CarouselInfo() {
     const intervalo = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % carouselItems.length);
     }, 5000);
-
     return () => clearInterval(intervalo);
   }, []);
 
@@ -47,7 +48,7 @@ function CarouselInfo() {
         </div>
       </div>
       <div className="carousel-imagem">
-        <img src="/Logo-Completa.png" alt="Logo CashWise" />
+        <img src={`/${carouselItems[index].imagem}`} alt={carouselItems[index].title} />
       </div>
     </section>
   );
@@ -108,6 +109,7 @@ function App() {
 
   return (
     <div className="sobre-nos">
+      {/* HEADER */}
       <header className="topo-cashwise">
         <div className="lado-esquerdo">
           <img src="/logocash.png" alt="Logo CashWise" className="logo-cash" />
@@ -143,6 +145,7 @@ function App() {
         </div>
       </header>
 
+      {/* INTRO */}
       <section className="intro" id="intro">
         <div className="intro-conteudo">
           <div className="intro-header">
@@ -150,8 +153,7 @@ function App() {
             <span className="intro-titulo">Sobre Nós</span>
           </div>
           <h1 className="intro-titulo-principal">
-            Educando para um Futuro<br />
-            Financeiro Brilhante
+            Educando para um Futuro<br />Financeiro Brilhante
           </h1>
           <p className="intro-subtitulo">
             O CashWise nasceu com o propósito de transformar a maneira como jovens e pré-adolescentes lidam com o dinheiro. Acreditamos que a educação financeira deve começar cedo — e de forma leve, prática e divertida. <br /><br />
@@ -168,8 +170,10 @@ function App() {
         </div>
       </section>
 
+      {/* CARROSSEL */}
       <CarouselInfo />
 
+      {/* EQUIPE */}
       <section className="equipe" id="equipe">
         <br />
         <div className="linha-titulo">
@@ -190,6 +194,7 @@ function App() {
         ))}
       </section>
 
+      {/* FOOTER */}
       <footer className="footer" id="info">
         <div className="footer-links">
           <div className="footer-column">
