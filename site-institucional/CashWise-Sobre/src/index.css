@@ -1,0 +1,516 @@
+/* ==========================
+   GLOBAL E RESET GERAL
+========================== */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* ==========================
+   HEADER E NAVBAR FIXA
+========================== */
+.topo-cashwise {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 70px;
+  width: 100vw;
+  background-color: #10A5C6;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.menu-navegacao {
+  display: flex;
+  height: 100%;
+}
+
+.link-menu {
+  color: white;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.link-menu + .link-menu {
+  border-left: 1px solid #e0e0e0;
+}
+
+.link-menu:hover {
+  background-color: white;
+  color: #10A5C6;
+}
+
+.lado-esquerdo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-cash {
+  height: 250px;
+  width: 300px;
+  object-fit: contain;
+}
+
+.icones-direita {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.5rem;
+  color: white;
+  white-space: nowrap;
+  font-family: 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+  padding-right: 30px;
+}
+
+.icone-svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.header-centro {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* ==========================
+   MENU 3 PONTINHOS
+========================== */
+.menu-pontinhos {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-suspenso {
+  position: fixed;
+  top: 71px;
+  right: 1px;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+  z-index: 200;
+  border-radius: 8px;
+  padding: 10px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  display: none;
+}
+
+.menu-suspenso.mostrar {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-suspenso a {
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Lexend';
+  font-weight: 400;
+}
+
+.menu-suspenso a:hover {
+  background-color: #10A5C6;
+  color: white;
+}
+
+
+/* ==========================
+   SEÇÃO INTRO / SOBRE NÓS
+========================== */
+.intro {
+  width: 100%;
+  background-color: #eaf2f5;
+  padding: 110px 0 30px;
+}
+
+.intro-conteudo {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 50px;
+  text-align: left;
+}
+
+.intro-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.bolinha-i {
+  background-color: #eaf2f5;
+  color: #1032C7;
+  border: 2px solid #1032C7;
+  font-weight: 600;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lexend';
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.intro-titulo {
+  font-size: 1.1rem;
+  color: #1032C7;
+  font-family: 'Lexend';
+  font-weight: 500;
+}
+
+.intro-titulo-principal {
+  font-size: 3rem;
+  line-height: 1.3;
+  font-family: 'Lexend';
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.intro-subtitulo {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  font-family: 'DM Sans';
+}
+
+.botao-scroll {
+  border: 2px solid #106CC7;
+  background-color: transparent;
+  color: #106CC7;
+  font-family: 'Lexend';
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+.botao-scroll:hover {
+  background-color: #106CC7;
+  color: white;
+}
+/* ==========================
+   CARROSSEL (Missão, Visão, Valores)
+========================== */
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+  max-width: 1200px;
+  margin-bottom: 60px;
+}
+
+.carousel-texto {
+  flex: 1;
+  max-width: 600px;
+}
+
+.carousel-texto h2 {
+  font-size: 2.5rem;
+  color: #106CC7;
+  margin-bottom: 20px;
+  font-family: 'Lexend';
+}
+
+.carousel-texto p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  font-family: 'DM Sans';
+}
+
+.carousel-indicadores {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  font-size: 22px;
+  color: #106CC7;
+}
+
+.carousel-imagem {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.carousel-imagem img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* ==========================
+   BLOCO "CONHECENDO A SOCIEDADE"
+========================== */
+.linha-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.linha-decorativa {
+  flex: 1;
+  height: 3px;
+}
+
+.esquerda {
+  margin-right: 0px; /* Espaçamento entre a onda e o texto */
+  background: linear-gradient(to left, #10A5C6, #106CC7);
+}
+
+.direita {
+  margin-left: 0px; /* Espaçamento entre a onda e o texto */
+  background: linear-gradient(to right, #10A5C6, #106CC7);
+}
+
+.texto-sociedade {
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: #10A5C6;
+  background-color: white;
+  padding: 0 38px;
+  z-index: 2;
+  white-space: nowrap;
+  position: relative;
+}
+
+
+/* ==========================
+   BLOCO EQUIPE
+========================== */
+.equipe {
+  background-color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.membro-linha{
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+  padding: 40px 60px;
+  text-align: left;
+  box-sizing: border-box;
+}
+.membro-linha:not(:last-child) {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.08);
+}
+.membro-foto {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.membro-info {
+  flex: 1;
+  padding-top: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.membro-info h3 {
+  font-family: 'Lexend';
+  font-size: 1.6rem;
+  color: #000;
+  margin: 0;
+}
+
+.membro-info .cargo {
+  font-family: 'Lexend';
+  color: #666;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 2px 0 15px;
+}
+
+.membro-info .descricao {
+  font-family: 'Lexend';
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+/* ==========================
+   ANIMAÇÕES
+========================== */
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animate-background {
+  0% { background-position: center center; }
+  100% { background-position: -300px -300px; }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: #10A5C6; }
+}
+
+
+/* ==========================
+   RODAPÉ
+========================== */
+.footer {
+  background-color: #f4f4f4;
+  padding: 60px 40px 20px;
+  color: #1a1a1a;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dcdcdc;
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.logo-cash-rodape {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 10px;
+  margin-left: -10px; /* Aqui também ajusta visualmente só a imagem */
+}
+
+
+.footer-column {
+  min-width: 180px;
+  margin: 10px;
+}
+
+.footer-column h4 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.footer-column li:hover {
+  color: #10A5C6;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* ← joga para a esquerda */
+  text-align: left;        /* ← alinha o texto junto */
+}
+
+.footer-logo strong {
+  font-size: 20px;
+}
+
+.footer-logo p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+  color: black;
+  margin-top: 10px;
+}
+.footer-icons svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.footer-icons svg:hover {
+  transform: scale(1.1);
+}
+
+
+.footer-icons svg:hover {
+  color: #10A5C6;
+  transition: color 0.3s ease;
+}

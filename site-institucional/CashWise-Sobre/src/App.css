@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1032C7; /* tom mais escuro da paleta CashWise */
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #333333;
+}
+
+.highlight {
+  color: #10A5C6;
+}
+
+.team-section {
+  margin-top: 60px;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.member-info {
+  text-align: left;
+}
+
+.member-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #106CC7;
+}
+
+.member-role {
+  font-size: 1rem;
+  color: #10C76F;
+}
+
+.member-desc {
+  font-size: 0.95rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+.sobre-nos {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+

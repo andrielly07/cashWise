@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lexend:wght@400;500;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nós - CashWise</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    const membros = document.querySelectorAll('.membro-linha');
+  
+    const observer = new IntersectionObserver((entradas) => {
+      entradas.forEach(entrada => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('visivel');
+          observer.unobserve(entrada.target); // remove depois de aparecer
+        }
+      });
+    }, {
+      threshold: 0.2 // começa a animação quando 20% do bloco aparecer na tela
+    });
+  
+    membros.forEach(membro => {
+      observer.observe(membro);
+    });
+  </script>
+  
+</body>
+</html>
